@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>连载动漫</title>
+  <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" href="css/serialize.css">
+  <link rel="stylesheet" href="css/base.css">
+  <!-- <link rel="stylesheet/less" href="less/base.less">
+  <link rel="stylesheet/less" href="less/serialize.less">
+  <script src="lib/less.js"></script> -->
+</head>
+
+<body>
+  <div id="layout">
+    <!--标题  -->
+    <header id="top">
+      <a href="index.html">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+      </a>
+      <span>连载动漫</span>
+    </header>
+    <!--主体内容  -->
+    <main id="title" class="clearfix">
+      <script type="text/html" id="titleTemplate">
+        {{each}}
+        <div class="media">
+          <div class="media-left">
+            <a href="{{$value.url}}">
+              <img class="media-object" src="{{$value.img}}" alt="">
+            </a>
+          </div>
+          <div class="media-body">
+            <h4 class="media-heading">{{$value.name}}</h4>
+            <p>{{$value.episode}}</p>
+            <p>{{$value.updateTime}}</p>
+            <p>下载次数:{{$value.downloadCount}}</p>
+          </div>
+        </div>
+        {{/each}}
+      </script>
+
+    </main>
+  </div>
+</body>
+
+</html>
+<script src="lib/jquery/jquery-1.12.4.js"></script>
+<script src="lib/bootstrap/js/bootstrap.js"></script>
+<script src="lib/template.js"></script>
+<script src="js/serialize.js"></script>

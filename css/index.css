@@ -1,0 +1,194 @@
+#layout {
+  /*限制容器在pc端只能到640px宽度*/
+  max-width: 440px;
+  min-width: 300px;
+  margin: 0 auto;
+  position: relative;
+}
+#topbar .status {
+  width: 100%;
+  height: 50px;
+  position: relative;
+  background-color: #eee;
+}
+#topbar .status > span {
+  display: inline-block;
+  color: red;
+  font-size: 20px;
+}
+#topbar .status > span:first-of-type {
+  position: absolute;
+  left: 0;
+  width: 50px;
+  line-height: 50px;
+  text-align: center;
+}
+#topbar .status > span:nth-child(2) {
+  padding: 0 50px;
+  color: #000;
+  font-weight: 800;
+  width: 100%;
+  line-height: 50px;
+  text-align: center;
+}
+#topbar .status > span:last-of-type {
+  position: absolute;
+  right: 0;
+  width: 50px;
+  line-height: 50px;
+  text-align: center;
+}
+#slideshow .swiper-container {
+  width: 100%;
+  height: 230px;
+}
+#slideshow .swiper-container .swiper-wrapper .swiper-slide > a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+#slideshow .swiper-container .swiper-wrapper .swiper-slide > a > img {
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+}
+#slideshow .swiper-container .swiper-wrapper .swiper-slide > a > p {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 30px;
+  line-height: 30px;
+  padding-left: 10px;
+  bottom: -10px;
+  color: #eee;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 999;
+}
+#slideshow .swiper-container .swiper-pagination {
+  text-align: right;
+}
+#slideshow .swiper-container .swiper-pagination .swiper-pagination-bullet {
+  background: #eee;
+}
+#tab .nav-tabs {
+  width: 100%;
+  padding: 0 10px;
+  height: 50px;
+  border: 0;
+}
+#tab .nav-tabs > li {
+  width: 25%;
+  text-align: center;
+  border: 0;
+}
+#tab .nav-tabs > li > a {
+  color: #000;
+  font-weight: 800;
+}
+#tab .nav-tabs > li:hover > a {
+  border: 0;
+  background-color: transparent;
+}
+#tab .nav-tabs > li.active {
+  border-bottom: 2px solid red;
+}
+#tab .nav-tabs > li.active > a {
+  border: 0;
+}
+#tab .tab-content {
+  width: 100%;
+  text-align: center;
+}
+#tab .tab-content > div {
+  display: inline-block;
+  width: 49%;
+  height: 260px;
+  text-align: center;
+  border: 1px solid #eee;
+  box-sizing: border-box;
+}
+#tab .tab-content > div > a {
+  display: inline-block;
+  width: 95%;
+  height: 100%;
+  position: relative;
+}
+#tab .tab-content > div > a > img {
+  width: 100%;
+  height: 230px;
+}
+#tab .tab-content > div > a > p {
+  font-size: 12px;
+  line-height: 30px;
+  color: #666;
+}
+#tab .tab-content > div > a > p:first-of-type {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  color: #ccc;
+  background-color: rgba(0, 0, 0, 0.5);
+  bottom: 18px;
+}
+.mask {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  opacity: 0.15;
+  display: none;
+  z-index: 1000;
+}
+#gongNeng {
+  width: 300px;
+  height: 500px;
+  background-color: #fff;
+  position: absolute;
+  top: 50px;
+  left: 10px;
+  z-index: 1050;
+  display: none;
+}
+#gongNeng .gn {
+  width: 100%;
+  height: 100%;
+}
+#gongNeng .gn .logo {
+  width: 100%;
+  height: 110px;
+  line-height: 110px;
+  text-align: center;
+  border-bottom: 1px solid #eee;
+}
+#gongNeng .gn > ul {
+  width: 100%;
+}
+#gongNeng .gn > ul > li {
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  padding-left: 50px;
+  padding-right: 30px;
+  border-bottom: 1px solid #eee;
+}
+#gongNeng .gn > ul > li:hover > a {
+  color: #67f;
+  text-decoration: none;
+}
+#gongNeng .gn > ul > li:hover > a > span {
+  color: #67f;
+}
+#gongNeng .gn > ul > li > a {
+  float: left;
+  color: #000;
+  width: 100%;
+}
+#gongNeng .gn > ul > li > a > span {
+  float: right;
+  color: #ccc;
+  height: 50px;
+  line-height: 50px;
+}

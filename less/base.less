@@ -1,0 +1,39 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /*在移动端标签按住的时候会出现高亮的效果。我们要去除掉*/
+    -webkit-tap-highlight-color:transparent;
+}
+body {
+    font-family: '微软雅黑';
+}
+
+ul {
+    list-style: none;
+}
+a {
+    color: #000;
+    text-decoration: none;
+}
+img {
+    /*去除图片底部3px的间距*/
+    vertical-align: bottom;
+}
+input {
+    border: 0;
+    outline: 0;
+}
+
+.clearfix::before, 
+.clearfix::after {
+    content: "";
+    display: block;
+
+}
+.clearfix::after {
+    clear: both;
+}
+.clearfix {
+    *zoom:1;
+}

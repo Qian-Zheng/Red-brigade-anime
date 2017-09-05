@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>专题列表</title>
+  <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/speciall.css">
+  <!-- <link rel="stylesheet/less" href="less/base.less">
+  <link rel="stylesheet/less" href="less/speciall.less">
+  <script src="lib/less.js"></script> -->
+</head>
+
+<body>
+  <div id="layout">
+    <!--标题  -->
+    <header id="top">
+      <a href="index.html">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+      </a>
+      <span>专题列表</span>
+    </header>
+    <!--主体内容  -->
+    <main id="title" class="clearfix">
+      <script type="text/html" id="titleTemplate">
+        {{each}}
+        <div class="logo">
+          <a href="{{$value.url}}">
+            <img src="{{$value.img}}" alt="">
+          </a>
+          <p>{{$value.title}}</p>
+        </div>
+        {{/each}}
+      </script>
+
+    </main>
+  </div>
+</body>
+
+</html>
+<script src="lib/jquery/jquery-1.12.4.js"></script>
+<script src="lib/bootstrap/js/bootstrap.js"></script>
+<script src="lib/template.js"></script>
+<script src="js/speciall.js"></script>

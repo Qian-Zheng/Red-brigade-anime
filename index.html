@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>红旅动漫</title>
+  <!-- <link rel="stylesheet/less" href="less/base.less"> -->
+  <!-- <link rel="stylesheet/less" href="less/index.less"> -->
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" href="lib/swiper/css/swiper.min.css">
+  <!-- <script src="lib/less.js"></script> -->
+</head>
+
+<body>
+  <div id="layout">
+    <!--顶部通栏  -->
+    <header id="topbar">
+      <div class="status">
+        <span class="glyphicon glyphicon-list gnList"></span>
+        <span>红旅动漫</span>
+        <span class="glyphicon glyphicon-search"></span>
+      </div>
+    </header>
+    <!--轮播图  -->
+    <section id="slideshow">
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <script type="text/html" id="slide">
+            {{each}}
+            <div class="swiper-slide">
+              <a href="javascript:;">
+                <img src="{{$value.img}}" alt="">
+                <p>{{$value.title}}</p>
+              </a>
+            </div>
+            {{/each}}
+          </script>
+        </div>
+        <!-- 如果需要分页器 -->
+        <div class="swiper-pagination"></div>
+      </div>
+    </section>
+    <!--tab栏  -->
+    <section id="tab">
+      <div>
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs" role="tablist">
+          <li role="presentation" class="active" type="1"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">新增连载</a></li>
+          <li role="presentation" type="2"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">新增完结</a></li>
+          <li role="presentation" type="3"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">推荐连载</a></li>
+          <li role="presentation" type="4"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">推荐完结</a></li>
+        </ul>
+        <!-- Tab panes -->
+        <div class="tab-content clearfix">
+          <script type="text/html" id="tabTemplate">
+            {{each}}
+            <div role="tabpanel" class="tab-pane active" id="home">
+              <a href="{{$value.url}}">
+                <img src="{{$value.img}}" alt="">
+                <p>{{$value.update}}</p>
+                <p>{{$value.name}}</p>
+              </a>
+            </div>
+            {{/each}}
+          </script>
+        </div>
+      </div>
+    </section>
+    <!--功能界面 -->
+    <div class="mask"></div>
+    <section id="gongNeng">
+      <div class="gn">
+        <div class="logo">
+          <img src="img/logo.png" alt="">
+        </div>
+        <ul>
+          <li>
+            <a href="serialize.html">连载动漫-get
+              <span class="glyphicon glyphicon-chevron-right"></span>
+            </a>
+          </li>
+          <li>
+            <a href="special.html">专题列表-get
+              <span class="glyphicon glyphicon-chevron-right"></span>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:;">关于
+              <span class="glyphicon glyphicon-chevron-right"></span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </div>
+</body>
+
+</html>
+<script src="lib/jquery/jquery-1.12.4.js"></script>
+<script src="lib/bootstrap/js/bootstrap.js"></script>
+<script src="lib/swiper/js/swiper.min.js"></script>
+<script src="lib/template.js"></script>
+<script src="js/index.js"></script>
